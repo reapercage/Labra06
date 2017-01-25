@@ -16,10 +16,7 @@ namespace JAMK.IT
         public string Hetu { get; set; }
         public override string ToString()
         {
-            return base.ToString();
-            {
-                return Etunimi + " " + Sukunimi + " " + Hetu;
-            }
+           return Etunimi + " " + Sukunimi + " " + Hetu;
         }
     }
     ///This class holds person information in a collection
@@ -27,6 +24,10 @@ namespace JAMK.IT
     class Henkilot
     {
         private List<Henkilo> henkilot;
+        public List<Henkilo> Henkilolista
+        {
+            get { return henkilot; }
+        }
         public Henkilot()
         {
             henkilot = new List<Henkilo>();
@@ -45,6 +46,17 @@ namespace JAMK.IT
             {
                 return null;
             }
+        }
+        public Henkilo HaeHenkiloHetulla(string hetu)
+        {
+            foreach (Henkilo hlo in henkilot)
+            {
+                if (hlo.Hetu == hetu)
+                {
+                    return hlo;
+                }
+            }
+            return null;
         }
     }
 }
