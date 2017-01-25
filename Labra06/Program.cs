@@ -4,12 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labra06
+namespace JAMK.IT.T1Henkilorekisteri
 {
     class Program
     {
         static void Main(string[] args)
         {
+            TestaaHenkiloRekisteri();
+        }
+        static void TestaaHenkiloRekisteri()
+        {
+
         }
     }
 }
